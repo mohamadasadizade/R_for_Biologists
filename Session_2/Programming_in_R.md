@@ -369,12 +369,6 @@ print(chick(4))
 
 **Example:Translating DNA seq to Protein seq just by if/else and for loop.**
 
-
-```python
-x <- miveh("ATCGCTAT", "ATACGCTC")
-```
-
-
 ```python
 dna_seq <- "ATGGTGCTATTAGTG"
 
