@@ -27,8 +27,10 @@ R programming step by step.
 ### Topics covered
 
 - R fundamentals
-- Data types and data structures
+- loop and condition implementation
+- working with biological sequences
+- Data structures
 - Data manipulation
 - Data visualization
 - Statistical analysis
-- Working with biological datasets
+- Intro to genetic variant and transcription count data
