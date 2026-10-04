@@ -413,13 +413,3 @@ cat("Protein sequence:", protein)
 ```
 
     Protein sequence: MVLLV
-
-
-```python
-num <- 15
-val <- num-6
-print((num%/%val))
-```
-
-    [1] 1
-
