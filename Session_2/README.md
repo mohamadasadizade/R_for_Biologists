@@ -367,7 +367,7 @@ print(chick(4))
     [1] 16
 
 
-**Example:Translating DNA seq to Protein seq just by if/else and for loop.**
+## Example: Translating DNA seq to Protein seq just by if/else and for loop
 
 ```python
 dna_seq <- "ATGGTGCTATTAGTG"
@@ -415,7 +415,7 @@ cat("Protein sequence:", protein)
     Protein sequence: MVLLV
 
 
-## **Example 1: Counting Mutations Between Two DNA Sequences**
+## **Example: Counting Mutations Between Two DNA Sequences**
 
 **Concepts Used:**  
 Loops and `if/else`.
@@ -460,7 +460,7 @@ print(count_mutations(seq1, seq2))
     [1] 1
 
 
-## **Example 2:  Computing GC Content Percentage**
+## **Example:  Computing GC Content Percentage**
 
 **Concepts Used:**  
 Math, functions.
