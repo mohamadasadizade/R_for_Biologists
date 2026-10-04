@@ -584,7 +584,7 @@ print(gc_content(sequence))
     [1] 50
 
 
-## **Example 3: Calculating DNA Melting Temperature**
+## **Example: Calculating DNA Melting Temperature**
 
 **Concepts Used:**  
 Math, `if/else`, and functions.
