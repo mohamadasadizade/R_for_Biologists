@@ -268,12 +268,6 @@ Parameters are passed into functions inside parentheses.
 Functions can have multiple parameters, separated by commas.
 
 
-```python
-{
-  (gsub"[^GC]","","CGTACGTAGCTAGCTTACGATCGTACGATCGGTA")
-}
-```
-
 
 ```python
 x <- max(8, 3, 12, 88)
