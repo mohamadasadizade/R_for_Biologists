@@ -11,8 +11,8 @@ A practical introduction to R programming for biology students and researchers.
 | **Session 1** | Introduction to R | [View session →](Session_1/) |
 | **Session 2** | Data Types & Data Structures | [View session →](Session_2/) |
 | **Session 3** | Data Manipulation | [View session →](Session_3/) |
-| **Session 4** | Data Visualization | [View session →](Session_4/) |
-| **Session 5** | Statistical Analysis | [View session →](Session_5/) |
+| **Session 4** | Statistical Analysis | [View session →](Session_4/) |
+| **Session 5** | Data Visualization | [View session →](Session_5/) |
 
 ---
 
