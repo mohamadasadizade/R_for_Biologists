@@ -12,7 +12,7 @@ When working with data sets, we need to use data structures to store and manipul
 7. DataFrame operations
 
 
-![Different datastructures in R programming language](./data_structures.png)
+![data_structures.png](./data_structures.png)
 
 
 
