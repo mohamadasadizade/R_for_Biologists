@@ -12,7 +12,7 @@ When working with data sets, we need to use data structures to store and manipul
 7. DataFrame operations
 
 
-![data_structures.png](./images/image1.png)
+![data_structures.png]
 
 
 
