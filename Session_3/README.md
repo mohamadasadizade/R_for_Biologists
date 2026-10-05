@@ -12,7 +12,7 @@ When working with data sets, we need to use data structures to store and manipul
 7. DataFrame operations
 
 
-![data_structures.png](./pics/data_structures.png)
+![data_structures.png](./images/image1.png)
 
 
 
@@ -664,7 +664,7 @@ print(x[,1])
 
 We can transpose a matrix in R with the function `t()`
 
-![transpose](./pics/transpose.jfif)
+![transpose](./images/image2.jfif)
 
 ```python
 x <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
@@ -879,4 +879,4 @@ print(mean(annotation_df$GC_Content))
 **Indexing Summary**
 
 
-![indexing_summary.png](./pics/indexing.png)
+![indexing_summary.png](./images/image3.png)
