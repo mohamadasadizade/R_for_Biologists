@@ -9,15 +9,6 @@
 ## genetic variants dataset
 
 
-\begin{array}{|c|c|c|c|c|c|c|c|c|}
-\hline
-\textbf{Chromosome} & \textbf{Variant ID} & \textbf{Position} & \textbf{Gene ID} & \textbf{Ref} & \textbf{Alt} & \textbf{Impact} & \textbf{Clinical Significance} \\ \hline
-1 & rs123 & 123456 & BRCA1 & A & G & High & 1 \\ \hline
-2 & rs456 & 234567 & TP53 & C & T & Moderate & 0 \\ \hline
-3 & rs789 & 345678 & EGFR & G & A & Low & 1 \\ \hline
-\end{array}
-
-
 
 
 ```python
