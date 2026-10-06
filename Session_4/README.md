@@ -507,19 +507,6 @@ print(x)
 
 ## Gene expression datasets
 
-
-\begin{array}{|c|c|c|c|c|c|c|}
-\hline
-\textbf{Person} & \textbf{Gene A} & \textbf{Gene B} & \textbf{Gene C} & \textbf{Gene D} & \textbf{Gene E} & \textbf{Cancer} \\ \hline
-P01 & 50 & 60 & 110 & 45 & 50 & 0 \\ \hline
-P02 & 51 & 59 & 109 & 46 & 49 & 0 \\ \hline
-P03 & 123 & 193 & 101 & 47 & 48 & 1 \\ \hline
-P04 & 127 & 197 & 102 & 46 & 49 & 1 \\ \hline
-P05 & 125 & 195 & 103 & 44 & 51 & 1 \\ \hline
-\end{array}
-
-
-
 ```python
 trans <- read.csv("Expression.csv")
 ```
