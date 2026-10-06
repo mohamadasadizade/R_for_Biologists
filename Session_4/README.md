@@ -190,7 +190,7 @@ $$ \text{Var}(X) = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2 $$
 
 
 
-Where $ μ $ is the mean of the numbers and $ x_i $ are the individual numbers.
+Where $μ$ is the mean of the numbers and $x_i$ are the individual numbers.
 
 
 ```python
