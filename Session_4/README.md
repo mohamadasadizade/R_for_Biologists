@@ -701,18 +701,6 @@ heatmap(cor_gene,
 
 #### T test
 
-
-\begin{array}{|c|c|c|c|c|c|c|}
-\hline
-\textbf{Person} & \textbf{Gene A} & \textbf{Gene B} & \textbf{Gene C} & \textbf{Gene D} & \textbf{Gene E} & \textbf{Cancer} \\ \hline
-P01 & 50 & 60 & 110 & 45 & 50 & 0 \\ \hline
-P02 & 51 & 59 & 109 & 46 & 49 & 0 \\ \hline
-P03 & 123 & 193 & 101 & 47 & 48 & 1 \\ \hline
-P04 & 127 & 197 & 102 & 46 & 49 & 1 \\ \hline
-P05 & 125 & 195 & 103 & 44 & 51 & 1 \\ \hline
-\end{array}
-
-
 ```python
 trans <- read.csv("Expression.csv")
 ```
@@ -753,22 +741,6 @@ print(trans)
     28    P28    125    195    103     44     51      1
     29    P29    122    192    100     45     50      1
     30    P30    130    200    101     47     48      1
-
-
-
-```python
-trans[trans$Cancer == 0, "Gene.A"]
-```
-
-
-<style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>50</li><li>52</li><li>48</li><li>51</li><li>50</li><li>51</li><li>53</li><li>49</li><li>50</li><li>52</li><li>49</li><li>51</li><li>50</li><li>52</li><li>48</li></ol>
-
-
 
 
 ```python
