@@ -695,7 +695,7 @@ heatmap(cor_gene,
 
 
     
-![heatmap.png](./images/image1.png)
+![heatmap.png](./images/image2.png)
     
 
 
