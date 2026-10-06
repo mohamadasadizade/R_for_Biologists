@@ -218,6 +218,7 @@ sd(data$Impact)
 
 ## iris built-in dataset
 
+![iris_dataset](./images/iamage1.png)
 
 ```python
 print(iris)
