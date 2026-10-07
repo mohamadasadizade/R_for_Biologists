@@ -866,6 +866,48 @@ print(p_values)
     Gene.A Gene.B Gene.C Gene.D Gene.E 
      0.000  0.000  0.879  0.740  0.740 
 
+#### t-test for all genes
+
+The following approach performs a t-test for each gene and also calculates the log2 fold change (log2FC).
+
+```python
+# t-test
+
+results <- data.frame(
+  Gene = names(trans)[2:(ncol(trans)-1)],
+  
+  P_value = sapply(trans[2:(ncol(trans)-1)], function(x) {
+    t.test(x ~ trans$Cancer)$p.value
+  }),
+  
+  log2FC = sapply(trans[2:(ncol(trans)-1)], function(x) {
+    log2(
+      mean(x[trans$Cancer == 1]) /
+        mean(x[trans$Cancer == 0])
+    )
+  })
+)
+
+results <- results[order(results$P_value), ]
+
+print(results)
+
+results$P_value <- format.pval(
+  results$P_value,
+  digits = 3,
+  eps = 0.001
+)
+
+print(results)
+```
+
+This approach performs the t-test and log2FC calculation for all genes at once, instead of performing the analysis manually for each gene.
+
+
+#### Difference from the previous t-test approach
+
+The previous approach performs the t-test for a specific gene, while this approach uses `sapply()` to automatically repeat the same analysis for all genes.
+
 
 #### sapply() and tapply()
 
