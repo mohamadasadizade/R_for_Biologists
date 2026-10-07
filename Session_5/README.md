@@ -36,7 +36,7 @@ plot(1:10, main="My Chart", xlab="The x-axis", ylab="The y-axis", col = "darkcya
 
 
     
-![png](Session_5_files/Session_5_2_0.png)
+![png](./images/image1.png)
     
 
 
@@ -51,7 +51,7 @@ plot(x, y, xlab="Sepal Length", ylab="Petal.Length", main = "IRIS", col = "red")
 
 
     
-![png](Session_5_files/Session_5_3_0.png)
+![png](./images/image2.png)
     
 
 
@@ -68,7 +68,7 @@ lines(line2, type="l", col = "red")
 
 
     
-![png](Session_5_files/Session_5_4_0.png)
+![png](./images/image3.png)
     
 
 
@@ -126,7 +126,7 @@ barplot(avg_sepal_length,
 
 
     
-![png](Session_5_files/Session_5_8_0.png)
+![png](./images/image4.png)
     
 
 
@@ -156,7 +156,7 @@ pie(x, label = labels, main="Average Sepal Length")
 
 
     
-![png](Session_5_files/Session_5_11_0.png)
+![png](./images/image5.png)
     
 
 
@@ -172,7 +172,7 @@ boxplot(iris$Sepal.Length)
 
 
     
-![png](Session_5_files/Session_5_13_0.png)
+![png](./images/image6.png)
     
 
 
@@ -186,7 +186,7 @@ boxplot(trans$Gene.A)
 
 
     
-![png](Session_5_files/Session_5_14_0.png)
+![png](./images/image7.png)
     
 
 
@@ -202,7 +202,7 @@ hist(iris$Petal.Length, xlab = "Petal Length", col = "darkcyan")
 
 
     
-![png](Session_5_files/Session_5_16_0.png)
+![png](./images/image8.png)
     
 
 
@@ -216,6 +216,6 @@ hist(data, breaks = 50)
 
 
     
-![png](Session_5_files/Session_5_17_0.png)
+![png](./images/image9.png)
     
 
