@@ -901,6 +901,17 @@ results$P_value <- format.pval(
 print(results)
 ```
 
+Output:
+
+```text
+         Gene P_value        log2FC
+Gene.B Gene.B  <0.001  1.7011810190
+Gene.A Gene.A  <0.001  1.3065801306
+Gene.D Gene.D   0.740  0.0042307803
+Gene.E Gene.E   0.740 -0.0038834345
+Gene.C Gene.C   0.879  0.0009500791
+```
+
 This approach performs the t-test and log2FC calculation for all genes at once, instead of performing the analysis manually for each gene.
 
 
