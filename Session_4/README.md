@@ -999,3 +999,113 @@ sapply(
 This example shows how the two functions can work together.
 
 `sapply()` goes through each gene, and `tapply()` calculates the mean for each condition.
+
+
+#### Scaling Data
+
+Scaling is a common preprocessing step in data analysis.
+
+It changes the scale of numerical variables so that variables with different ranges can be compared more easily.
+
+There are two common scaling methods:
+
+1. Standard Scaling (Z-score)
+2. Min-Max Scaling
+
+
+#### Scaling One Gene
+
+```python
+# Read the data
+trans <- read.csv("Expression.csv")
+
+# Select one gene
+x <- trans$Gene.A
+```
+
+
+#### Standard Scaling (Z-score)
+
+Standard scaling transforms the data using the following formula:
+
+```text
+Z = (x - mean) / standard deviation
+```
+
+The idea is to subtract the mean from each value and then divide by the standard deviation.
+
+```python
+# Standard scaling
+z_score <- (x - mean(x)) / sd(x)
+
+head(z_score)
+```
+
+Standard scaling transforms the data so that:
+
+```text
+Mean → 0
+
+Standard deviation → 1
+```
+
+It does **not** force the values into a fixed range and values can be negative or positive.
+
+
+R also has a built-in function called `scale()` that can perform standard scaling on the whole numerical dataset:
+
+```python
+# Create a copy of the original data
+trans_scaled <- trans
+
+# Select gene columns
+genes <- 2:(ncol(trans) - 1)
+
+# Standard scaling
+trans_scaled[genes] <- scale(trans[genes])
+
+# Check the result
+head(trans_scaled)
+```
+
+
+#### Min-Max Scaling
+
+Min-Max scaling transforms the data into a fixed range between **0 and 1**.
+
+The formula is:
+
+```text
+X_scaled = (x - min(x)) / (max(x) - min(x))
+```
+
+In R:
+
+```python
+# Min-Max scaling
+min_max <- (x - min(x)) / (max(x) - min(x))
+
+head(min_max)
+```
+
+After Min-Max scaling:
+
+```text
+Minimum value → 0
+
+Maximum value → 1
+
+Other values → between 0 and 1
+```
+
+We can check the range:
+
+```python
+range(min_max)
+```
+
+Output:
+
+```text
+[1] 0 1
+```
