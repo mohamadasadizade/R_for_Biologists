@@ -866,3 +866,83 @@ print(p_values)
     Gene.A Gene.B Gene.C Gene.D Gene.E 
      0.000  0.000  0.879  0.740  0.740 
 
+
+#### sapply() and tapply()
+
+`sapply()` and `tapply()` are useful functions for applying a function to different parts of our data.
+
+`sapply()` applies a function to each element, while `tapply()` applies a function to each group.
+
+
+#### sapply()
+
+`sapply()` applies a function to each element of a vector or list.
+
+```python
+x <- list(
+  gene1 = c(1, 2, 3),
+  gene2 = c(10, 20, 30),
+  gene3 = c(5, 6, 7)
+)
+
+sapply(x, mean)
+```
+
+    gene1 gene2 gene3
+        2    20     6
+
+
+Here, `mean()` is applied separately to each element of the list.
+
+
+#### tapply()
+
+`tapply()` applies a function to different groups of a vector.
+
+```python
+expression <- c(10, 20, 30, 40, 50, 60)
+
+group <- c(
+  "Control", "Control", "Control",
+  "Cancer", "Cancer", "Cancer"
+)
+
+tapply(expression, group, mean)
+```
+
+    Cancer Control
+         50      20
+
+
+Here, `tapply()` separates the values into groups and then applies `mean()` to each group.
+
+#### Combining sapply() and tapply()
+
+We can also use `sapply()` and `tapply()` together.
+
+`sapply()` can move through different genes, while `tapply()` calculates the value for each group.
+
+```python
+df <- data.frame(
+  Gene_A = c(10, 20, 30, 40, 50, 60),
+  Gene_B = c(5, 10, 15, 20, 25, 30),
+  condition = c(
+    "Normal", "Normal", "Normal",
+    "Cancer", "Cancer", "Cancer"
+  )
+)
+
+sapply(
+  df[, c("Gene_A", "Gene_B")],
+  function(x) tapply(x, df$condition, mean)
+)
+```
+
+            Gene_A Gene_B
+    Cancer      50     25
+    Normal      20     10
+
+
+This example shows how the two functions can work together.
+
+`sapply()` goes through each gene, and `tapply()` calculates the mean for each condition.
