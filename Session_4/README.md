@@ -578,7 +578,7 @@ summary(trans)
 
 - A correlation value close to **1** shows that the compared columns are **highly correlated**, while a value close to **0** shows that they are **less correlated**.
 
-![correlation](./images/image2.png)
+![correlation](./images/image.png)
 
 - You can find the correlation matrix using the `cor()` function.
 
