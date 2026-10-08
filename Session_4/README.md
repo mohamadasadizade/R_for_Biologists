@@ -20,6 +20,7 @@ data <- read.csv("Variants.csv")
 head(data, 6)
 ```
 
+```text
    Variant Chromosome Position Gene Ref Alt   Mutation Impact
 1 rs123456          1   123456 ABC1   A   G   Missense      1
 2 rs789012          2   234567 ABC2   C   T     Silent      0
@@ -34,7 +35,7 @@ head(data, 6)
 4                     2
 5                     3
 6                     0
-
+```
 
 
 ```python
