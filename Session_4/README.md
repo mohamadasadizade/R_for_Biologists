@@ -17,131 +17,23 @@ data <- read.csv("Variants.csv")
 
 
 ```python
-print(data)
+head(data, 6)
 ```
 
-        Variant Chromosome Position  Gene Ref Alt   Mutation Impact
-    1  rs123456          1   123456  ABC1   A   G   Missense      1
-    2  rs789012          2   234567  ABC2   C   T     Silent      0
-    3  rs345678          3   345678  ABC3   G   A Frameshift      4
-    4  rs567890          4   456789  ABC4   T   C   Missense      5
-    5  rs910111          5   567890  ABC5   A   T  Insertion      6
-    6  rs234567          6   678901  ABC6   G   C   Deletion      8
-    7  rs890123          7   789012  ABC7   C   G   Missense      7
-    8  rs123890          8   890123  ABC8   A   C     Silent      4
-    9  rs456789          9   901234  ABC9   T   G   Missense      3
-    10 rs234890         10   123456 ABC10   G   A Frameshift      5
-    11 rs345890         11   234567 ABC11   C   T   Missense      6
-    12 rs567123         12   345678 ABC12   A   T  Insertion      8
-    13 rs789345         13   456789 ABC13   T   C     Silent      4
-    14 rs123789         14   567890 ABC14   G   A   Missense      3
-    15 rs910123         15   678901 ABC15   A   G   Deletion      2
-    16 rs345012         16   789012 ABC16   T   G     Silent      5
-    17 rs789567         17   890123 ABC17   C   T Frameshift      6
-    18 rs234123         18   901234 ABC18   A   C   Missense      8
-    19 rs567456         19   123456 ABC19   G   T  Insertion    100
-    20 rs890789         20   234567 ABC20   C   A   Deletion     33
-    21 rs234001          1   101234  DEF1   G   T   Missense      5
-    22 rs345001          2   202345  DEF2   C   A     Silent      4
-    23 rs456001          3   303456  DEF3   T   G Frameshift     34
-    24 rs567001          4   404567  DEF4   A   C  Insertion     22
-    25 rs678001          5   505678  DEF5   G   C   Deletion    100
-    26 rs789001          6   606789  DEF6   T   A   Missense      1
-    27 rs890001          7   707890  DEF7   A   T     Silent      2
-    28 rs901001          8   808901  DEF8   G   A Frameshift      5
-    29 rs123001          9   909012  DEF9   C   T   Missense      6
-    30 rs234002         10   101234 DEF10   G   C  Insertion      8
-    31 rs345002         11   202345 DEF11   T   A     Silent      7
-    32 rs456002         12   303456 DEF12   A   G   Missense      6
-    33 rs567002         13   404567 DEF13   C   G   Deletion      5
-    34 rs678002         14   505678 DEF14   T   C Frameshift     12
-    35 rs789002         15   606789 DEF15   G   A     Silent     42
-    36 rs890002         16   707890 DEF16   A   T   Missense     53
-    37 rs901002         17   808901 DEF17   T   G  Insertion     67
-    38 rs123002         18   909012 DEF18   G   C     Silent      5
-    39 rs234003         19   101234 DEF19   A   T   Missense      4
-    40 rs345003         20   202345 DEF20   C   A   Deletion      3
-    41 rs567890         15   890123  GHI1   G   A   Missense     24
-    42 rs123456         12   234567  GHI2   T   G     Silent      5
-    43 rs890123         17   345678  GHI3   C   T  Insertion      6
-    44 rs234567          2   456789  GHI4   A   C   Deletion      7
-    45 rs345678         11   567890  GHI5   G   T   Missense    100
-    46 rs567123          9   678901  GHI6   A   G Frameshift     98
-    47 rs789012          1   789012  GHI7   T   A     Silent     67
-    48 rs890567         14   890123  GHI8   C   G   Missense     87
-    49 rs456789          5   901234  GHI9   A   T     Silent     98
-    50 rs234890          7   123456 GHI10   G   C Frameshift     12
-    51 rs678901         19   234567 GHI11   T   G  Insertion      3
-    52 rs345123          8   345678 GHI12   C   A   Missense      4
-    53 rs789345          4   456789 GHI13   A   G   Deletion      5
-    54 rs567456         16   567890 GHI14   T   C Frameshift      7
-    55 rs123890          6   678901 GHI15   G   A     Silent     97
-    56 rs345890         18   789012 GHI16   A   C  Insertion      4
-    57 rs910111         10   890123 GHI17   T   G   Missense      3
-    58 rs234001         13   901234 GHI18   C   T     Silent      2
-    59 rs345001          3   123456 GHI19   A   G   Missense      4
-    60 rs456001         20   234567 GHI20   G   T Frameshift     65
-       Clinical.Significance
-    1                      4
-    2                      1
-    3                      5
-    4                      2
-    5                      3
-    6                      0
-    7                      5
-    8                      1
-    9                      4
-    10                     2
-    11                     4
-    12                     3
-    13                     1
-    14                     2
-    15                     0
-    16                     1
-    17                     5
-    18                     2
-    19                     4
-    20                     0
-    21                     4
-    22                     1
-    23                     5
-    24                     3
-    25                     0
-    26                     2
-    27                     1
-    28                     4
-    29                     5
-    30                     3
-    31                     1
-    32                     2
-    33                     0
-    34                     5
-    35                     1
-    36                     4
-    37                     3
-    38                     1
-    39                     2
-    40                     0
-    41                     4
-    42                     1
-    43                     3
-    44                     0
-    45                     5
-    46                     2
-    47                     1
-    48                     4
-    49                     0
-    50                     5
-    51                     3
-    52                     2
-    53                     0
-    54                     4
-    55                     1
-    56                     3
-    57                     5
-    58                     1
-    59                     4
-    60                     2
+   Variant Chromosome Position Gene Ref Alt   Mutation Impact
+1 rs123456          1   123456 ABC1   A   G   Missense      1
+2 rs789012          2   234567 ABC2   C   T     Silent      0
+3 rs345678          3   345678 ABC3   G   A Frameshift      4
+4 rs567890          4   456789 ABC4   T   C   Missense      5
+5 rs910111          5   567890 ABC5   A   T  Insertion      6
+6 rs234567          6   678901 ABC6   G   C   Deletion      8
+  Clinical.Significance
+1                     4
+2                     1
+3                     5
+4                     2
+5                     3
+6                     0
 
 
 
@@ -221,160 +113,16 @@ sd(data$Impact)
 ![iris_dataset](./images/image1.png)
 
 ```python
-print(iris)
+head(iris, 6)
 ```
 
-        Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-    1            5.1         3.5          1.4         0.2     setosa
-    2            4.9         3.0          1.4         0.2     setosa
-    3            4.7         3.2          1.3         0.2     setosa
-    4            4.6         3.1          1.5         0.2     setosa
-    5            5.0         3.6          1.4         0.2     setosa
-    6            5.4         3.9          1.7         0.4     setosa
-    7            4.6         3.4          1.4         0.3     setosa
-    8            5.0         3.4          1.5         0.2     setosa
-    9            4.4         2.9          1.4         0.2     setosa
-    10           4.9         3.1          1.5         0.1     setosa
-    11           5.4         3.7          1.5         0.2     setosa
-    12           4.8         3.4          1.6         0.2     setosa
-    13           4.8         3.0          1.4         0.1     setosa
-    14           4.3         3.0          1.1         0.1     setosa
-    15           5.8         4.0          1.2         0.2     setosa
-    16           5.7         4.4          1.5         0.4     setosa
-    17           5.4         3.9          1.3         0.4     setosa
-    18           5.1         3.5          1.4         0.3     setosa
-    19           5.7         3.8          1.7         0.3     setosa
-    20           5.1         3.8          1.5         0.3     setosa
-    21           5.4         3.4          1.7         0.2     setosa
-    22           5.1         3.7          1.5         0.4     setosa
-    23           4.6         3.6          1.0         0.2     setosa
-    24           5.1         3.3          1.7         0.5     setosa
-    25           4.8         3.4          1.9         0.2     setosa
-    26           5.0         3.0          1.6         0.2     setosa
-    27           5.0         3.4          1.6         0.4     setosa
-    28           5.2         3.5          1.5         0.2     setosa
-    29           5.2         3.4          1.4         0.2     setosa
-    30           4.7         3.2          1.6         0.2     setosa
-    31           4.8         3.1          1.6         0.2     setosa
-    32           5.4         3.4          1.5         0.4     setosa
-    33           5.2         4.1          1.5         0.1     setosa
-    34           5.5         4.2          1.4         0.2     setosa
-    35           4.9         3.1          1.5         0.2     setosa
-    36           5.0         3.2          1.2         0.2     setosa
-    37           5.5         3.5          1.3         0.2     setosa
-    38           4.9         3.6          1.4         0.1     setosa
-    39           4.4         3.0          1.3         0.2     setosa
-    40           5.1         3.4          1.5         0.2     setosa
-    41           5.0         3.5          1.3         0.3     setosa
-    42           4.5         2.3          1.3         0.3     setosa
-    43           4.4         3.2          1.3         0.2     setosa
-    44           5.0         3.5          1.6         0.6     setosa
-    45           5.1         3.8          1.9         0.4     setosa
-    46           4.8         3.0          1.4         0.3     setosa
-    47           5.1         3.8          1.6         0.2     setosa
-    48           4.6         3.2          1.4         0.2     setosa
-    49           5.3         3.7          1.5         0.2     setosa
-    50           5.0         3.3          1.4         0.2     setosa
-    51           7.0         3.2          4.7         1.4 versicolor
-    52           6.4         3.2          4.5         1.5 versicolor
-    53           6.9         3.1          4.9         1.5 versicolor
-    54           5.5         2.3          4.0         1.3 versicolor
-    55           6.5         2.8          4.6         1.5 versicolor
-    56           5.7         2.8          4.5         1.3 versicolor
-    57           6.3         3.3          4.7         1.6 versicolor
-    58           4.9         2.4          3.3         1.0 versicolor
-    59           6.6         2.9          4.6         1.3 versicolor
-    60           5.2         2.7          3.9         1.4 versicolor
-    61           5.0         2.0          3.5         1.0 versicolor
-    62           5.9         3.0          4.2         1.5 versicolor
-    63           6.0         2.2          4.0         1.0 versicolor
-    64           6.1         2.9          4.7         1.4 versicolor
-    65           5.6         2.9          3.6         1.3 versicolor
-    66           6.7         3.1          4.4         1.4 versicolor
-    67           5.6         3.0          4.5         1.5 versicolor
-    68           5.8         2.7          4.1         1.0 versicolor
-    69           6.2         2.2          4.5         1.5 versicolor
-    70           5.6         2.5          3.9         1.1 versicolor
-    71           5.9         3.2          4.8         1.8 versicolor
-    72           6.1         2.8          4.0         1.3 versicolor
-    73           6.3         2.5          4.9         1.5 versicolor
-    74           6.1         2.8          4.7         1.2 versicolor
-    75           6.4         2.9          4.3         1.3 versicolor
-    76           6.6         3.0          4.4         1.4 versicolor
-    77           6.8         2.8          4.8         1.4 versicolor
-    78           6.7         3.0          5.0         1.7 versicolor
-    79           6.0         2.9          4.5         1.5 versicolor
-    80           5.7         2.6          3.5         1.0 versicolor
-    81           5.5         2.4          3.8         1.1 versicolor
-    82           5.5         2.4          3.7         1.0 versicolor
-    83           5.8         2.7          3.9         1.2 versicolor
-    84           6.0         2.7          5.1         1.6 versicolor
-    85           5.4         3.0          4.5         1.5 versicolor
-    86           6.0         3.4          4.5         1.6 versicolor
-    87           6.7         3.1          4.7         1.5 versicolor
-    88           6.3         2.3          4.4         1.3 versicolor
-    89           5.6         3.0          4.1         1.3 versicolor
-    90           5.5         2.5          4.0         1.3 versicolor
-    91           5.5         2.6          4.4         1.2 versicolor
-    92           6.1         3.0          4.6         1.4 versicolor
-    93           5.8         2.6          4.0         1.2 versicolor
-    94           5.0         2.3          3.3         1.0 versicolor
-    95           5.6         2.7          4.2         1.3 versicolor
-    96           5.7         3.0          4.2         1.2 versicolor
-    97           5.7         2.9          4.2         1.3 versicolor
-    98           6.2         2.9          4.3         1.3 versicolor
-    99           5.1         2.5          3.0         1.1 versicolor
-    100          5.7         2.8          4.1         1.3 versicolor
-    101          6.3         3.3          6.0         2.5  virginica
-    102          5.8         2.7          5.1         1.9  virginica
-    103          7.1         3.0          5.9         2.1  virginica
-    104          6.3         2.9          5.6         1.8  virginica
-    105          6.5         3.0          5.8         2.2  virginica
-    106          7.6         3.0          6.6         2.1  virginica
-    107          4.9         2.5          4.5         1.7  virginica
-    108          7.3         2.9          6.3         1.8  virginica
-    109          6.7         2.5          5.8         1.8  virginica
-    110          7.2         3.6          6.1         2.5  virginica
-    111          6.5         3.2          5.1         2.0  virginica
-    112          6.4         2.7          5.3         1.9  virginica
-    113          6.8         3.0          5.5         2.1  virginica
-    114          5.7         2.5          5.0         2.0  virginica
-    115          5.8         2.8          5.1         2.4  virginica
-    116          6.4         3.2          5.3         2.3  virginica
-    117          6.5         3.0          5.5         1.8  virginica
-    118          7.7         3.8          6.7         2.2  virginica
-    119          7.7         2.6          6.9         2.3  virginica
-    120          6.0         2.2          5.0         1.5  virginica
-    121          6.9         3.2          5.7         2.3  virginica
-    122          5.6         2.8          4.9         2.0  virginica
-    123          7.7         2.8          6.7         2.0  virginica
-    124          6.3         2.7          4.9         1.8  virginica
-    125          6.7         3.3          5.7         2.1  virginica
-    126          7.2         3.2          6.0         1.8  virginica
-    127          6.2         2.8          4.8         1.8  virginica
-    128          6.1         3.0          4.9         1.8  virginica
-    129          6.4         2.8          5.6         2.1  virginica
-    130          7.2         3.0          5.8         1.6  virginica
-    131          7.4         2.8          6.1         1.9  virginica
-    132          7.9         3.8          6.4         2.0  virginica
-    133          6.4         2.8          5.6         2.2  virginica
-    134          6.3         2.8          5.1         1.5  virginica
-    135          6.1         2.6          5.6         1.4  virginica
-    136          7.7         3.0          6.1         2.3  virginica
-    137          6.3         3.4          5.6         2.4  virginica
-    138          6.4         3.1          5.5         1.8  virginica
-    139          6.0         3.0          4.8         1.8  virginica
-    140          6.9         3.1          5.4         2.1  virginica
-    141          6.7         3.1          5.6         2.4  virginica
-    142          6.9         3.1          5.1         2.3  virginica
-    143          5.8         2.7          5.1         1.9  virginica
-    144          6.8         3.2          5.9         2.3  virginica
-    145          6.7         3.3          5.7         2.5  virginica
-    146          6.7         3.0          5.2         2.3  virginica
-    147          6.3         2.5          5.0         1.9  virginica
-    148          6.5         3.0          5.2         2.0  virginica
-    149          6.2         3.4          5.4         2.3  virginica
-    150          5.9         3.0          5.1         1.8  virginica
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
 
 
 
@@ -403,89 +151,41 @@ summary(iris)
 
 
 ```python
-iris[iris$Species == "setosa",]
+setosa <- iris[iris$Species == "setosa",]
 #find the row that corresponds to setosa
 ```
 
+```python
+head(setosa)
+```
 
-<table class="dataframe">
-<caption>A data.frame: 50 × 5</caption>
-<thead>
-	<tr><th></th><th scope=col>Sepal.Length</th><th scope=col>Sepal.Width</th><th scope=col>Petal.Length</th><th scope=col>Petal.Width</th><th scope=col>Species</th></tr>
-	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>1</th><td>5.1</td><td>3.5</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>2</th><td>4.9</td><td>3.0</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>3</th><td>4.7</td><td>3.2</td><td>1.3</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>4</th><td>4.6</td><td>3.1</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>5</th><td>5.0</td><td>3.6</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>6</th><td>5.4</td><td>3.9</td><td>1.7</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>7</th><td>4.6</td><td>3.4</td><td>1.4</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>8</th><td>5.0</td><td>3.4</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>9</th><td>4.4</td><td>2.9</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>10</th><td>4.9</td><td>3.1</td><td>1.5</td><td>0.1</td><td>setosa</td></tr>
-	<tr><th scope=row>11</th><td>5.4</td><td>3.7</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>12</th><td>4.8</td><td>3.4</td><td>1.6</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>13</th><td>4.8</td><td>3.0</td><td>1.4</td><td>0.1</td><td>setosa</td></tr>
-	<tr><th scope=row>14</th><td>4.3</td><td>3.0</td><td>1.1</td><td>0.1</td><td>setosa</td></tr>
-	<tr><th scope=row>15</th><td>5.8</td><td>4.0</td><td>1.2</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>16</th><td>5.7</td><td>4.4</td><td>1.5</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>17</th><td>5.4</td><td>3.9</td><td>1.3</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>18</th><td>5.1</td><td>3.5</td><td>1.4</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>19</th><td>5.7</td><td>3.8</td><td>1.7</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>20</th><td>5.1</td><td>3.8</td><td>1.5</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>21</th><td>5.4</td><td>3.4</td><td>1.7</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>22</th><td>5.1</td><td>3.7</td><td>1.5</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>23</th><td>4.6</td><td>3.6</td><td>1.0</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>24</th><td>5.1</td><td>3.3</td><td>1.7</td><td>0.5</td><td>setosa</td></tr>
-	<tr><th scope=row>25</th><td>4.8</td><td>3.4</td><td>1.9</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>26</th><td>5.0</td><td>3.0</td><td>1.6</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>27</th><td>5.0</td><td>3.4</td><td>1.6</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>28</th><td>5.2</td><td>3.5</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>29</th><td>5.2</td><td>3.4</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>30</th><td>4.7</td><td>3.2</td><td>1.6</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>31</th><td>4.8</td><td>3.1</td><td>1.6</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>32</th><td>5.4</td><td>3.4</td><td>1.5</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>33</th><td>5.2</td><td>4.1</td><td>1.5</td><td>0.1</td><td>setosa</td></tr>
-	<tr><th scope=row>34</th><td>5.5</td><td>4.2</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>35</th><td>4.9</td><td>3.1</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>36</th><td>5.0</td><td>3.2</td><td>1.2</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>37</th><td>5.5</td><td>3.5</td><td>1.3</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>38</th><td>4.9</td><td>3.6</td><td>1.4</td><td>0.1</td><td>setosa</td></tr>
-	<tr><th scope=row>39</th><td>4.4</td><td>3.0</td><td>1.3</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>40</th><td>5.1</td><td>3.4</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>41</th><td>5.0</td><td>3.5</td><td>1.3</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>42</th><td>4.5</td><td>2.3</td><td>1.3</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>43</th><td>4.4</td><td>3.2</td><td>1.3</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>44</th><td>5.0</td><td>3.5</td><td>1.6</td><td>0.6</td><td>setosa</td></tr>
-	<tr><th scope=row>45</th><td>5.1</td><td>3.8</td><td>1.9</td><td>0.4</td><td>setosa</td></tr>
-	<tr><th scope=row>46</th><td>4.8</td><td>3.0</td><td>1.4</td><td>0.3</td><td>setosa</td></tr>
-	<tr><th scope=row>47</th><td>5.1</td><td>3.8</td><td>1.6</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>48</th><td>4.6</td><td>3.2</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>49</th><td>5.3</td><td>3.7</td><td>1.5</td><td>0.2</td><td>setosa</td></tr>
-	<tr><th scope=row>50</th><td>5.0</td><td>3.3</td><td>1.4</td><td>0.2</td><td>setosa</td></tr>
-</tbody>
-</table>
-
-
+```text
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
 
 
 ```python
 length(iris[iris$Species == "setosa",])
 ```
 
-
-5
-
+```text
+[1] 5
+```
 
 
 ```python
 nrow(iris[iris$Species == "setosa",])
 ```
 
-
-50
+```text
+[2] 50
+```
 
 
 Multiple condition filtering
