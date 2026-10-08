@@ -73,8 +73,9 @@ summary(data)
 mean(data$Impact)
 ```
 
-
-21.7833333333333
+```text
+[1] 21.78333
+```
 
 
 **Variance** is how much each numbers in a set differs from the average.
@@ -90,8 +91,9 @@ Where $μ$ is the mean of the numbers and $x_i$ are the individual numbers.
 var(data$Impact)
 ```
 
-
-1019.73192090395
+```text
+[1] 1019.732
+```
 
 
 The **standard deviation** **(SD)** is the square root of the variance.
@@ -105,8 +107,9 @@ $$ \sigma = \sqrt{\text{Var}(X)} $$
 sd(data$Impact)
 ```
 
-
-31.9332416284967
+```text
+[1] 31.93324
+```
 
 
 ## iris built-in dataset
@@ -186,7 +189,7 @@ nrow(iris[iris$Species == "setosa",])
 ```
 
 ```text
-[2] 50
+[1] 50
 ```
 
 
