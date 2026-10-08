@@ -578,6 +578,8 @@ summary(trans)
 
 - A correlation value close to **1** shows that the compared columns are **highly correlated**, while a value close to **0** shows that they are **less correlated**.
 
+![correlation](./images/image2.png)
+
 - You can find the correlation matrix using the `cor()` function.
 
 
@@ -695,11 +697,15 @@ heatmap(cor_gene,
 
 
     
-![heatmap.png](./images/image2.png)
+![heatmap.png](./images/image3.png)
     
 
 
 #### T test
+
+A t-test is a statistical test used to compare the mean values of two groups and see whether their difference is likely to be meaningful or just due to random variation. For example, if we want to study whether the expression of a specific gene is different between cancer patients and healthy people, we can use a t-test to compare the mean gene expression in the two groups. The test gives us a p-value: a small p-value (commonly < 0.05) suggests that the gene expression is significantly different between cancer and healthy groups.
+
+![t-test](./images/image4.png)
 
 ```python
 trans <- read.csv("Expression.csv")
